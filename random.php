@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-// Database connection details
+
 $host = "localhost"; 
 $username = "root"; 
 $password = ""; 
@@ -15,7 +15,7 @@ try {
     exit();
 }
 
-// Function to generate random numbers within a range
+
 function generateRandomNumbers($start, $end, $count = 10) {
     $randomNumbers = [];
     for ($i = 0; $i < $count; $i++) {
@@ -24,7 +24,7 @@ function generateRandomNumbers($start, $end, $count = 10) {
     return $randomNumbers;
 }
 
-// Handle POST request
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = json_decode(file_get_contents('php://input'), true);
     if ($data === null) {
